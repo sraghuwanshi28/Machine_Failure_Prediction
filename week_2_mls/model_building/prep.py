@@ -10,6 +10,8 @@ from sklearn.preprocessing import LabelEncoder
 # for hugging face space authentication to upload files
 from huggingface_hub import login, HfApi
 
+HF_TOKEN = os.getenv("HF_TOKEN")
+
 # Define constants for the dataset and output paths
 api = HfApi(HF_TOKEN)
 DATASET_PATH = "hf://datasets/sraghuwanshi04/Machine-Failure-Prediction/machine-failure-prediction.csv"
