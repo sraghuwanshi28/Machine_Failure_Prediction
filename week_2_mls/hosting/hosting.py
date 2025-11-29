@@ -1,7 +1,10 @@
 from huggingface_hub import HfApi
 import os
 
-api = HfApi(HF_TOKEN)
+HF_TOKEN = os.getenv("HF_TOKEN")
+# Define constants for the dataset and output paths
+api = HfApi(token=HF_TOKEN)
+
 api.upload_folder(
     folder_path="week_2_mls/deployment",     # the local folder containing your files
     repo_id="sraghuwanshi04/Machine-Failure-Prediction",          # the target repo

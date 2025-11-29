@@ -15,7 +15,10 @@ import os
 from huggingface_hub import login, HfApi, create_repo
 from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
 
-api = HfApi()
+HF_TOKEN = os.getenv("HF_TOKEN")
+
+# Define constants for the dataset and output paths
+api = HfApi(token=HF_TOKEN)
 
 Xtrain_path = "hf://datasets/sraghuwanshi04/Machine-Failure-Prediction/Xtrain.csv"
 Xtest_path = "hf://datasets/sraghuwanshi04/Machine-Failure-Prediction/Xtest.csv"

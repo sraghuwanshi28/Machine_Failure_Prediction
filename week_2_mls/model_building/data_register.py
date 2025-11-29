@@ -7,7 +7,7 @@ repo_id = "sraghuwanshi04/Machine-Failure-Prediction"
 repo_type = "dataset"
 
 # Initialize API client
-api = HfApi(HF_TOKEN)
+api = HfApi(token=HF_TOKEN)
 
 # Step 1: Check if the space exists
 try:
